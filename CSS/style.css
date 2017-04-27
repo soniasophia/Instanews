@@ -58,6 +58,7 @@ body {
   background-color: #000;
   color: #fff;
   font-family: 'opensanslight', sans-serif;
+  height: 100vh;
 }
 
 .container {
@@ -70,8 +71,7 @@ body {
     width: 100%;
 }
 
-.site-header {
- 
+.website-header {
     align-content: center;
     display: flex;
     flex-wrap: wrap;
