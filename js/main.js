@@ -37,7 +37,7 @@ $(function () {
   })
   $('.stories').append(storyString);
   }).fail(function(){
-    $('.stories').append("<p><span>Sorry, something went wrong.</span></p>");
+    $('.stories').append('<p><span class="error-message">Sorry, something went wrong.</span></p>');
 
     });
 
