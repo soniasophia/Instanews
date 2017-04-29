@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-    display: flex;
+    // display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
@@ -22,8 +22,11 @@ body {
     width: 100%;
 }
 
-
 img {
     height: auto;
     max-width: 100%;
+}
+
+li {
+  list-style: none;
 }

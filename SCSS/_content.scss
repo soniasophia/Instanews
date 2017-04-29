@@ -21,18 +21,39 @@
 }
 
 
+.stories p {
+    background-color: rgba(40, 40, 40, 0.5);
+    padding: 0.5rem;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+}
+
 .story-grid {
     margin: 0 auto;
     width: 100%;
-    margin-top: 30%;
+}
+
+.story-cell {
+  width: 100vw;
+  height: 100vw;
+  position: relative;
+}
+
+.image-container {
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .story-cell img {
   max-width: 100%;
+  
 }
 
 
-.story-abstract a {
+.story-cell a {
   text-decoration: none;
   color: $base-font-color;
 }
