@@ -10,8 +10,10 @@
       padding-top: 1rem;
     }
 
-    .copyright {
-      display:flex;
+    @include desktop {
+      .copyright {
+        display:flex;
+      }
 
     }
 }

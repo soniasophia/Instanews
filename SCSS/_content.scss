@@ -16,6 +16,8 @@
 
     @include tablet {
       width: 200px;
+      position: relative;
+      right: 100px;
     }
 }
 
