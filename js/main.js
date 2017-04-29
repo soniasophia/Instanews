@@ -6,7 +6,7 @@ $(function () {
   hideLoader();
 
   function hideSection () {
-    $('.section-selector').hide();
+    $('#section-selector').hide();
   }
   hideSection();
 
@@ -14,6 +14,7 @@ $(function () {
   $('#sections').on('change', function () {
     $('.loader-gif').show();
     $('.stories').empty();
+    $('.website-header').addClass('small-header').removeClass('.website-header');
 
     var section = this.value;
     var storyString = '';
@@ -33,14 +34,11 @@ $(function () {
     hideLoader();
     hideSection();
 
+
     $.each(data.results, function(index, value) {
       if (value.multimedia.length >=5 && runs < 12 ) {
         storyString+= '<li class="story-cell">' + '<a href="' + value.url + '" target="_blank">' + '<div style="background-image: url(\'' + value.multimedia[4].url + '\')" class="image-container">' + '<p>' + value.abstract + '</p>' + '</div>' + '</a>' + '</li>'
-        
-        // + '<div style="background-image: url(\'' + value.multimedia[4].url + '\')" class="story-image">' +
-        
-        
-        // '<div class="story-cell" style="background-image: url(\'' + value.multimedia[4].url + '\')"><img src="' +  + '" class="story-image"><div class="story-link"><a href="' + value.url + '" target="_blank"><p class="story-abstract">' + value.abstract + '</a></p></div></div>';
+
         runs++;
     }
     
