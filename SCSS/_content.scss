@@ -1,11 +1,22 @@
 .logo {
     margin-bottom: 1rem;
     text-align: center;
+
+    img {
+      @include tablet {
+        width: 100px;
+      }
+    }
 }
+
 
 .logo, .search-form {
     display: block;
     width: 300px;
+
+    @include tablet {
+      width: 200px;
+    }
 }
 
 .search-form-inner {
@@ -27,17 +38,36 @@
     position: absolute;
     bottom: 0;
     margin: 0;
+    width:100%;
 }
 
 .story-grid {
     margin: 0 auto;
     width: 100%;
+
+    @include tablet {
+      display: flex;
+      flex-flow: row wrap;
+    }
 }
 
 .story-cell {
   width: 100vw;
   height: 100vw;
   position: relative;
+
+  @include tablet {
+    width: 33.333vw;
+    height: 50vw;
+  }
+}
+
+.stories {
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .image-container {
