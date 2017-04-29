@@ -60,6 +60,11 @@
     width: 33.333vw;
     height: 50vw;
   }
+
+  @include desktop {
+    width: 25vw;
+    height: 35vw;
+  }
 }
 
 .stories {

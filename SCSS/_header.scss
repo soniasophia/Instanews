@@ -8,4 +8,9 @@
     @include tablet {
       margin-top: 0;
     }
+
+    @include desktop {
+      display: flex;
+      justify-content: flex-start;
+    }
 }

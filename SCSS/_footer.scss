@@ -1,5 +1,5 @@
 .website-footer {
-    color: #c2c2c2;
+    color: $footer-text-color;
     font-size: 9px;
     font-size: .9rem;
     margin-bottom: 3rem;
@@ -9,4 +9,14 @@
     p {
       padding-top: 1rem;
     }
+
+    .copyright {
+      display:flex;
+
+    }
+}
+
+
+span {
+  text-transform: uppercase;
 }
