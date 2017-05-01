@@ -16,39 +16,6 @@
     }
 }
 
-
-
-
-.small-header {
-  height: auto;
-  align-items: center;
-
-  @include tablet {
-    margin-top: 0;
-    position: relative;
-  }
-
-
-    .small-logo img {
-      @include tablet {
-        width: 100px;
-      }
-
-      @include desktop {
-        display: flex;
-        justify-content: flex-start;
-        width: 100px;
-      }
-    } 
-}
-
-
-
-
-
-
-
-
 .logo {
     text-align: center;
 
@@ -88,8 +55,33 @@
     @include tablet {
       text-align: left;
     }
+
+    p {
+    margin-bottom: 1rem;
+    }
 }
 
-.search-form-inner p {
-    margin-bottom: 1rem;
+
+
+.small-header {
+  height: auto;
+  align-items: center;
+
+  @include tablet {
+    margin-top: 0;
+    position: relative;
+  }
+
+
+    .small-logo img {
+      @include tablet {
+        width: 100px;
+      }
+
+      @include desktop {
+        display: flex;
+        justify-content: flex-start;
+        width: 100px;
+      }
+    } 
 }

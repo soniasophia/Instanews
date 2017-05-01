@@ -12,20 +12,20 @@
 
     @include desktop {
       .copyright {
-        display:flex;
+        display: flex;
       }
+    }
 
+    span {
+      text-transform: uppercase;
+    }
+
+    span.error-message {
+      text-align: center;
+      background-color: none;
+      text-transform: none;
+      font-style: italic;
     }
 }
 
 
-span {
-  text-transform: uppercase;
-}
-
-span.error-message {
-  text-align: center;
-  background-color: none;
-  text-transform: none;
-  font-style: italic;
-}
