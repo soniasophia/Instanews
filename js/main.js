@@ -14,7 +14,8 @@ $(function () {
   $('#sections').on('change', function () {
     $('.loader-gif').show();
     $('.stories').empty();
-    $('.website-header').addClass('small-header').removeClass('.website-header');
+    $('.website-header').addClass('small-header');
+    $('.logo').addClass('small-logo');
 
     var section = this.value;
     var storyString = '';
