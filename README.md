@@ -1,14 +1,15 @@
 # Project 2: InstaNews App
 
 ## Technologies Used
+- Git Bash (https://git-for-windows.github.io/)
 - Google Chrome Developer Tools
 - Gulp (autoprefixer, cssnano, eslint, notify, plumber, rename, sass, uglify)
 - Font Squirrel (https://www.fontsquirrel.com/)
 - Ajax
 - JavaScript
 - jQuery (https://jquery.com/)
-- jQuery Plugins (Selectric: http://selectric.js.org/)
 - Sass
+- Coality
 
 
 
