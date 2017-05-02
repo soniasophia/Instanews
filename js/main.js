@@ -37,8 +37,8 @@ $(function () {
 
 
     $.each(data.results, function(index, value) {
-      if (value.multimedia.length >=5 && runs < 12 ) {
-        storyString+= '<li class="story-cell">' + '<a href="' + value.url + '" target="_blank">' + '<div style="background-image: url(\'' + value.multimedia[4].url + '\')" class="image-container">' + '<p>' + value.abstract + '</p>' + '</div>' + '</a>' + '</li>'
+      if (value.multimedia.length >=5 && runs < 12) {
+        storyString+= '<li class="story-cell">' + '<a href="' + value.url + '" target="_blank">' + '<div style="background-image: url(\'' + value.multimedia[4].url + '\')" class="image-container">' + '<p class="story-abstract">' + value.abstract + '</p>' + '</div>' + '</a>' + '</li>'
 
         runs++;
     }

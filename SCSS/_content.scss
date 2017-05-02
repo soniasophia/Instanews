@@ -2,9 +2,14 @@
     background-color: rgba(40, 40, 40, 0.5);
     padding: 0.5rem;
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     margin: 0;
     width:100%;
+
+    @include tablet {
+      bottom: -200px;
+      transition: all .5s ease;
+    }
 }
 
 .story-grid {
@@ -21,15 +26,24 @@
   width: 100vw;
   height: 100vw;
   position: relative;
+  
 
   @include tablet {
     width: 33.333vw;
     height: 50vw;
+    overflow: hidden;
+
+    &:hover {
+      .story-abstract {
+        bottom: 0;
+      }
+    }
   }
 
   @include desktop {
     width: 25vw;
     height: 35vw;
+    overflow: hidden;
   }
 }
 
