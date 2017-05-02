@@ -1,6 +1,6 @@
 # Project 2: InstaNews App
 
-![InstaNews] (https://github.com/soniasophia/instanews/blob/master/Project-2-InstaNews-Desktop.png)
+![InstaNews] (Project-2-InstaNews-Desktop.png)
 Main Landing Screen (Desktop)
 
 ![InstaNews] (https://github.com/soniasophia/instanews/blob/master/Project-2-InstaNews-Desktop-2.png)
