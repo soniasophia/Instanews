@@ -1,4 +1,22 @@
-.stories p {
+.story-grid {
+    margin: 0 auto;
+    width: 100%;
+
+    @include tablet {
+      display: flex;
+      flex-flow: row wrap;
+    }
+}
+
+
+.stories {
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  p {
     background-color: rgba(40, 40, 40, 0.5);
     padding: 0.5rem;
     position: absolute;
@@ -10,17 +28,9 @@
       bottom: -200px;
       transition: all .5s ease;
     }
+  }
 }
 
-.story-grid {
-    margin: 0 auto;
-    width: 100%;
-
-    @include tablet {
-      display: flex;
-      flex-flow: row wrap;
-    }
-}
 
 .story-cell {
   width: 100vw;
@@ -45,15 +55,18 @@
     height: 35vw;
     overflow: hidden;
   }
-}
 
-.stories {
+  img {
+    max-width: 100%;
+  }
 
-  @include tablet {
-    display: flex;
-    flex-wrap: wrap;
+  a {
+    text-decoration: none;
+    color: $base-font-color;
   }
 }
+
+
 
 .image-container {
   height: 100%;
@@ -62,16 +75,7 @@
   background-position: center;
 }
 
-.story-cell img {
-  max-width: 100%;
-  
-}
 
-
-.story-cell a {
-  text-decoration: none;
-  color: $base-font-color;
-}
 
 .loader-gif {
     display: none;

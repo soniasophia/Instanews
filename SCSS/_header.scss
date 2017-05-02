@@ -14,15 +14,17 @@
     @include desktop {
     justify-content: flex-start;
     }
-}
 
-.logo {
+  .logo {
     text-align: center;
 
     @include tablet {
-      width: 200px;
+      width: 250px;
+      margin-right: 2rem;
     }
+  }
 }
+
 
 
 .logo, .search-form {
@@ -37,7 +39,8 @@
 
     @include desktop {
       right: 0;
-      max-width: 240px;
+      max-width: 200px;
+      margin: 0;
     }
 }
 
@@ -79,9 +82,10 @@
       }
 
       @include desktop {
-        display: flex;
+        // display: flex;
         justify-content: flex-start;
         width: 100px;
+        margin-right: 0;
       }
     } 
 }
