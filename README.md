@@ -6,6 +6,10 @@ Main Landing Screen (Desktop)
 ![InstaNews](https://github.com/soniasophia/instanews/blob/master/Project-2-InstaNews-Desktop-2.png)
 Selected Section Page (Desktop)
 
+## Project Objective
+- Create a one-page, responsive website to filter top news stories from the New York Times API
+- Optimize for 3 widths: mobile, min-width: 600px and min-width: 1000px
+
 ## Technologies Used
 - Git Bash (https://git-for-windows.github.io/)
 - Google Chrome Developer Tools
