@@ -31,7 +31,6 @@ $(function () {
       url: url,
 
   }).done(function (data) {
-    console.log(data);
     hideLoader();
     hideSection();
 
