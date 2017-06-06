@@ -8,7 +8,6 @@ var gulp = require('gulp'),
     cssnano = require('gulp-cssnano'),
     prettyerror = require('gulp-prettyerror');
 
-
 gulp.task('sass', function () {
   gulp.src('./SCSS/style.scss')
     .pipe(prettyerror())
@@ -19,8 +18,6 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./build/css'))
 });
 
-
-
 gulp.task('scripts', ['eslint'], function () {
   gulp.src('./js/*.js')
     .pipe(uglify())
@@ -28,14 +25,12 @@ gulp.task('scripts', ['eslint'], function () {
     .pipe(gulp.dest('./build/js'))
 });
 
-
 gulp.task('eslint', function() {
   return gulp.src(['./js/*.js','!node_modules/**'])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
 });
-
 
 gulp.task('browser-sync', function () {
   browserSync.init({ 
@@ -47,14 +42,11 @@ gulp.task('browser-sync', function () {
 gulp.watch(['./build/js/*.js', './build/css/*.css']).on('change', browserSync.reload);
 });
 
-
-
 gulp.task('watch', function( ) {
   gulp.watch('./js/*.js', ['scripts'])
   gulp.watch('./SCSS/*.scss', ['sass'])
 
 });
-
 
 gulp.task('default', ['watch', 'browser-sync']);
 

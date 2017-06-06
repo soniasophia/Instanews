@@ -1,17 +1,5 @@
-
-$(function () {
-  function hideLoader() {
-    $('.loader-gif').hide();
-  }
-  hideLoader();
-
-  function hideSection () {
-    $('#section-selector').hide();
-  }
-  hideSection();
-
-
-  $('#sections').on('change', function () {
+$(function() {
+  $('#sections').on('change', function() {
     $('.loader-gif').show();
     $('.stories').empty();
     $('.website-header').addClass('small-header');
@@ -19,33 +7,31 @@ $(function () {
 
     var section = this.value;
     var storyString = '';
-    var runs = 0;
     var url = 'https://api.nytimes.com/svc/topstories/v2/' + section + '.json';
     url += '?' + $.param({
-    'api-key': '322b3247fdb14b38b38d51b8c82d9cad'
-  });
-
-
+      'api-key': '322b3247fdb14b38b38d51b8c82d9cad'
+    }); 
+  
     $.ajax({
       method: 'GET',
-      url: url,
+      url: url, 
 
-  }).done(function (data) {
-    hideLoader();
-    hideSection();
+    }).done(function(data) {
+      var imagesTrue = data.results.filter(function(imagesFilter) {
+        return imagesFilter.multimedia.length > 0;
+      }).slice(0, 12)
 
+      $.each(imagesTrue, function (index, value) {
+        storyString += '<li class="story-cell">' + '<a href="' + value.url + '" target="_blank">' + '<div style="background-image: url(\'' + value.multimedia[4].url + '\')" class="image-container">' + '<p class="story-abstract">' + value.abstract + '</p>' + '</div>' + '</a>' + '</li>'
+      });
 
-    $.each(data.results, function(index, value) {
-      if (value.multimedia.length >=5 && runs < 12) {
-        storyString+= '<li class="story-cell">' + '<a href="' + value.url + '" target="_blank">' + '<div style="background-image: url(\'' + value.multimedia[4].url + '\')" class="image-container">' + '<p class="story-abstract">' + value.abstract + '</p>' + '</div>' + '</a>' + '</li>'
+      $('.stories').append(storyString);
 
-        runs++;
-    }
-    
-  })
-  $('.stories').append(storyString);
-  }).fail(function(){
-    $('.stories').append('<p><span class="error-message">Sorry, something went wrong.</span></p>');
+    }).fail(function () {
+      $('.stories').append('<p><span class="error-message">Sorry, something went wrong.</span></p>');
+
+    }).always(function () {
+      $('.loader-gif').hide();
 
     });
 
